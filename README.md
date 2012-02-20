@@ -1,18 +1,14 @@
-sybil's vimrc
-============
-Author:sybil
-modify from vgod's vimrc(https://github.com/vgod/vimrc)
 
 ONE-STEP INSTALL
 ----------------
 
 Use curl (for Mac OS X):
 
-     curl -o - https://raw.github.com/sybil63/sybil-vim/master/auto-install.sh | sh
+     curl -o - https://raw.github.com/tuqc/vim/master/auto-install.sh | sh
 
 or wget (for most UNIX platforms):
 
-     wget -O - https://raw.github.com/sybil63/sybil-vim/master/auto-install.sh | sh
+     wget -O - https://raw.github.com/tuqc/vim/master/auto-install.sh | sh
 
 
 MANUALLY INSTALL
@@ -20,7 +16,7 @@ MANUALLY INSTALL
 
 1. Check out from github
 
-        git clone git://github.com/sybil63/sybil-vim.git ~/.vim
+        git clone git://github.com/tuqc/vim.git ~/.vim
         cd ~/.vim
         git submodule update --init
 
@@ -41,7 +37,7 @@ MANUALLY INSTALL ON WINDOWS
 
         cd C:\Program Files\Vim   (or your installed path to Vim)
         rmdir /s vimfiles         (This deletes your old vim configurations. If you want to keep it, use move instead of rmdir.)
-        git clone git://github.com/sybil63/sybil-vim.git vimfiles
+        git clone git://github.com/tuqc/sybil-vim.git vimfiles
         git submodule update --init
 
 2. Install vimrc. Add the following line at the end of C:\Program Files\Vim\vimrc.
@@ -124,7 +120,7 @@ PLUGINS
   Useful commands:
     * `F7` toggles the TagBar
 
-* [vimPHP](https://github.com/sybil63/phpVim): php syntax file
+* [vimPHP](https://github.com/tuqc/phpVim): php syntax file
 
 * [phpcompletion](https://github.com/shawncplus/phpcomplete.vim): php omni completion
 
