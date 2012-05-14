@@ -125,24 +125,24 @@ let mapleader=","
 let g:mapleader=","
 
 "replace the current word in all opened buffers
-map <leader>r :call Replace()<CR>
+"map <leader>r :call Replace()<CR>
 
 " open the error console
-map <leader>cc :botright cope<CR> 
+"map <leader>cc :botright cope<CR> 
 " move to next error
-map <leader>] :cn<CR>
+"map <leader>] :cn<CR>
 " move to the prev error
-map <leader>[ :cp<CR>
+"map <leader>[ :cp<CR>
 
 " --- move around splits {
 " move to and maximize the below split 
-map <C-J> <C-W>j<C-W>_
+"map <C-J> <C-W>j<C-W>_
 " move to and maximize the above split 
-map <C-K> <C-W>k<C-W>_
+"map <C-K> <C-W>k<C-W>_
 " move to and maximize the left split 
-nmap <c-h> <c-w>h<c-w><bar>
+"nmap <c-h> <c-w>h<c-w><bar>
 " move to and maximize the right split  
-nmap <c-l> <c-w>l<c-w><bar>
+"nmap <c-l> <c-w>l<c-w><bar>
 set wmw=0                     " set the min width of a window to 0 so we can maximize others 
 set wmh=0                     " set the min height of a window to 0 so we can maximize others
 " }
@@ -150,14 +150,14 @@ set wmh=0                     " set the min height of a window to 0 so we can ma
 " move around tabs. conflict with the original screen top/bottom
 " comment them out if you want the original H/L
 " go to prev tab 
-map <S-H> gT
+"map <S-H> gT
 " go to next tab
-map <S-L> gt
+"map <S-L> gt
 
 " new tab
-map <C-t><C-t> :tabnew<CR>
+"map <C-t><C-t> :tabnew<CR>
 " close tab
-map <C-t><C-w> :tabclose<CR> 
+"map <C-t><C-w> :tabclose<CR> 
 
 " ,/ turn off search highlighting
 nmap <leader>/ :nohl<CR>
@@ -168,31 +168,31 @@ cnoremap <C-E>      <End>
 cnoremap <C-K>      <C-U>
 
 " ,p toggles paste mode
-nmap <leader>p :set paste!<BAR>set paste?<CR>
+"nmap <leader>p :set paste!<BAR>set paste?<CR>
 
 " allow multiple indentation/deindentation in visual mode
-vnoremap < <gv
-vnoremap > >gv
+"vnoremap < <gv
+"vnoremap > >gv
 
 " :cd. change working directory to that of the current file
 cmap cd. lcd %:p:h
 
 " Writing Restructured Text (Sphinx Documentation) {
    " Ctrl-u 1:    underline Parts w/ #'s
-   noremap  <C-u>1 yyPVr#yyjp
-   inoremap <C-u>1 <esc>yyPVr#yyjpA
+"   noremap  <C-u>1 yyPVr#yyjp
+"   inoremap <C-u>1 <esc>yyPVr#yyjpA
    " Ctrl-u 2:    underline Chapters w/ *'s
-   noremap  <C-u>2 yyPVr*yyjp
-   inoremap <C-u>2 <esc>yyPVr*yyjpA
+"   noremap  <C-u>2 yyPVr*yyjp
+"   inoremap <C-u>2 <esc>yyPVr*yyjpA
    " Ctrl-u 3:    underline Section Level 1 w/ ='s
-   noremap  <C-u>3 yypVr=
-   inoremap <C-u>3 <esc>yypVr=A
+"   noremap  <C-u>3 yypVr=
+"   inoremap <C-u>3 <esc>yypVr=A
    " Ctrl-u 4:    underline Section Level 2 w/ -'s
-   noremap  <C-u>4 yypVr-
-   inoremap <C-u>4 <esc>yypVr-A
+"   noremap  <C-u>4 yypVr-
+"   inoremap <C-u>4 <esc>yypVr-A
    " Ctrl-u 5:    underline Section Level 3 w/ ^'s
-   noremap  <C-u>5 yypVr^
-   inoremap <C-u>5 <esc>yypVr^A
+"   noremap  <C-u>5 yypVr^
+"   inoremap <C-u>5 <esc>yypVr^A
 "}
 
 "--------------------------------------------------------------------------- 
@@ -200,7 +200,7 @@ cmap cd. lcd %:p:h
 "--------------------------------------------------------------------------- 
 
 " Ctrl-[ jump out of the tag stack (undo Ctrl-])
-map <C-[> <ESC>:po<CR>
+"map <C-[> <ESC>:po<CR>
 
 " ,g generates the header guard
 map <leader>g :call IncludeGuard()<CR>
@@ -212,21 +212,6 @@ fun! IncludeGuard()
    call append( line("$"), "#endif // for #ifndef " . guard)
 endfun
 
-"F6: auto save, compile and run
-map <F6> :call CompileRun()<CR>
-fun! CompileRun()
-    exec "w"
-    if &filetype == "c"
-        exec "!gcc % -g -o %<"
-        exec "!.//%<"
-    elseif &filetype == "php"
-        exec "!php %"
-    elseif &filetype == "py"
-        exec "!python %"
-    elseif &filetype == "sh"
-        exec "!sh %"
-    endif
-endfun
 
 " Enable omni completion. (Ctrl-X Ctrl-O)
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
@@ -300,18 +285,6 @@ let g:tex_flavor='latex'
 
 " --- AutoClose - Inserts matching bracket, paren, brace or quote 
 " fixed the arrow key problems caused by AutoClose
-if !has("gui_running")	
-    set term=linux
-   imap OA <ESC>ki
-   imap OB <ESC>ji
-   imap OC <ESC>li
-   imap OD <ESC>hi
-
-   nmap OA k
-   nmap OB j
-   nmap OC l
-   nmap OD h
-endif
 
 
 
@@ -336,3 +309,4 @@ let g:tagbar_autofocus = 1
 
 " NERDTree
 map <F8> :NERDTreeToggle<CR>NERDTreeToggle
+
